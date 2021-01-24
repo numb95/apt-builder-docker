@@ -1,6 +1,12 @@
 from ubuntu:20.04
 LABEL maintainer="amir@goodarzi.net"
-RUN apt install -y dpkg-dev \
-    software-properties-common\
-    python-software-properties \
-    init-system-helpers
+ARG DEBIAN_FRONTEND=noninteractive
+RUN apt update && \
+    apt install -y gnupg \
+    gnupg2 \
+    gnupg1 \
+    ca-certificates \
+    tzdata \
+    software-properties-common \
+    dpkg-dev \
+    wget
