@@ -9,4 +9,5 @@ RUN apt update && \
     tzdata \
     software-properties-common \
     dpkg-dev \
-    wget
+    wget \
+    curl 
